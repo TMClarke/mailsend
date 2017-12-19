@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+  <h3> Welcome back, {{ user['name']}} </h3>
+  <br>
+
+  <h3>Open Listings</h3>
+  <ul class='open-listings'>
+    {% for l in listings %}
+      <li>
+        <a href="{{ l.link }}">{{ l.title }} - {{ l.author }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
